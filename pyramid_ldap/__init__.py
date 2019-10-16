@@ -151,7 +151,7 @@ class Connector(object):
 
         # we escape untrusted inputs `login_unsafe` and `password_unsafe`
         login = escape_filter_chars(login_unsafe)
-        password = escape_filter_chars(password_unsafe)
+        password = escape_filter_chars(password_unsafe).replace('\\2a', '*') # Restore '*'
 
         with self.manager.connection() as conn:
             search = getattr(self.registry, 'ldap_login_query', None)
