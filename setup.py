@@ -30,7 +30,7 @@ docs_extras = [
 ]
 
 setup(name='pyramid_ldap',
-      version='0.3.1.post1b',
+      version='0.3.2',
       description='pyramid_ldap',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
